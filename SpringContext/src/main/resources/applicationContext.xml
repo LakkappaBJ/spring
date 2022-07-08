@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!-- dependency injection-->
+	<bean class="com.xworkz.coreSpring.Sport" id="sport">
+		<constructor-arg ref="team"></constructor-arg>
+	</bean>
+	<bean class="com.xworkz.coreSpring.Team" id="team">
+		<constructor-arg ref="player"></constructor-arg>
+	</bean>
+	<bean class="com.xworkz.coreSpring.Player" id="player">
+		<constructor-arg ref="coach"></constructor-arg>
+	</bean>
+
+	<bean class="com.xworkz.coreSpring.Coach" id="coach">
+		<constructor-arg value="Lakkappa"></constructor-arg>
+	</bean>
+
+
+	<bean class="com.xworkz.coreSpring.DBConnection">
+		<!-- <constructor-arg name="username" value="root"></constructor-arg>
+		<constructor-arg name="password" value="root"></constructor-arg>
+		<constructor-arg name="url" value="jdbc:mysql://localhost:3306/sonoo"></constructor-arg>
+	-->
+		<constructor-arg name="username" value="${username}"></constructor-arg>
+		<constructor-arg name="password" value="${password}"></constructor-arg>
+		<constructor-arg name="url" value="${url}"></constructor-arg>
+	</bean>
+<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<property name="location" value="DBCon.properties"></property>
+</bean>
+</beans>
