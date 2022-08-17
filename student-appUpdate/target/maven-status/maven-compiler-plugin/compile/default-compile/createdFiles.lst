@@ -1,0 +1,11 @@
+com\xworkz\student\dto\EmailDTO.class
+com\xworkz\student\dto\StudentDTO.class
+com\xworkz\student\service\StudentService.class
+com\xworkz\student\controller\EmailController.class
+com\xworkz\student\dao\StudentDAOImpl.class
+com\xworkz\student\service\EmailServiceImpl.class
+com\xworkz\student\service\StudentServiceImpl.class
+com\xworkz\student\controller\StudentController.class
+com\xworkz\student\service\EmailService.class
+com\xworkz\student\dao\StudentDAO.class
+com\xworkz\student\entity\StudentEntity.class
